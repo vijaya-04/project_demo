@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<style>
+			.card{
+				background-color: white;
+			}
+			body{
+				background-color:pink;
+			}
+			h1{
+				font-size:50px;
+				color:blue;
+				text-align: center;
+			}
+			p{
+				text-align: center;
+				font-size:25px;
+			}
+			img.round-corners{
+				border-radius: 25px;
+			}
+			.zoom {
+				  
+				  transition: transform .2s;
+				  width: 250px;
+				  height: 250px;
+				  margin: 0 auto;
+				}
+				.zoom:hover {
+				  -ms-transform: scale(1); 
+				  -webkit-transform: scale(1); 
+				  transform: scale(1); 
+				}
+				.box1{
+				position: absolute;
+				top: 20%;
+				left: 8%;
+				font-size: 150px;
+				border-width:2px;
+	
+			}
+			.box2{
+				position: absolute;
+				top: 20%;
+				left: 30%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box3{
+				position: absolute;
+				top: 20%;
+				left: 52%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box4{
+				position: absolute;
+				top: 20%;
+				left: 74%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box5{
+				position: absolute;
+				top: 60%;
+				left: 8%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box6{
+				position: absolute;
+				top: 60%;
+				left: 30%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box7{
+				position: absolute;
+				top: 60%;
+				left: 52%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box8{
+				position: absolute;
+				top: 60%;
+				left: 74%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.message1{
+				position: absolute;
+				top:2%;
+				right:8%;
+				font-size:18px;
+				background-color:white;
+			}
+			.message2{
+				position: absolute;
+				top:2%;
+				right:19%;
+				font-size:18px;
+				background-color:white;
+			}
+			.next{
+				position: absolute;
+				bottom: 0%;
+				right:3%;
+				color:black;
+			}
+			.back{
+				position: absolute;
+				bottom: 0%;
+				right:96%;
+				color:black;
+			}
+		</style>
+		<script>
+			function goToAnotherPage(name, image, cost) {
+			localStorage.setItem("name",name);
+			localStorage.setItem("image",image);
+			localStorage.setItem("cost",cost);
+			}
+		</script>
+	</head>
+	<body >
+		<div class="card">
+			<h1><i>Bakery items</i></h1>
+			<form>
+			<a href="meujsp.jsp">
+				<div class="box1 zoom" onclick="goToAnotherPage('Chocolate chip cookies', 'https://handletheheat.com/wp-content/uploads/2020/10/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg', '40')"><img  class="round-corners" src="https://handletheheat.com/wp-content/uploads/2020/10/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg" width=230px height=180px><p >Chocolate chip cookies</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box2 zoom" onclick="goToAnotherPage('Bagels', 'https://bakingamoment.com/wp-content/uploads/2020/06/IMG_8813-bagel-recipe.jpg', '50')"><img class="round-corners" src="https://bakingamoment.com/wp-content/uploads/2020/06/IMG_8813-bagel-recipe.jpg" width=230px height=180px><p>Bagels</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box3 zoom" onclick="goToAnotherPage('Cream puff','https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/9/10/1/FN_Cream-Puffs_H1_s4x3.jpg.rend.hgtvcom.616.462.suffix/1568400659950.jpeg', '30')"><img class="round-corners" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/9/10/1/FN_Cream-Puffs_H1_s4x3.jpg.rend.hgtvcom.616.462.suffix/1568400659950.jpeg" width=230px height=180px><p>Cream puff</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box4 zoom" onclick="goToAnotherPage('Blueberry muffins','https://www.thespruceeats.com/thmb/Tb8HoZhsypPOxQs82HtKl71S6_k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-homemade-blueberry-muffins-995194-hero-03-c287b99f25b34568bb3fcfd87d4eda8b.jpg', '60')"><img class="round-corners" src="https://www.thespruceeats.com/thmb/Tb8HoZhsypPOxQs82HtKl71S6_k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-homemade-blueberry-muffins-995194-hero-03-c287b99f25b34568bb3fcfd87d4eda8b.jpg"width=250px height=180px><p>Blueberry muffins</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box5 zoom" onclick="goToAnotherPage('Cornbread','https://assets.epicurious.com/photos/580fc5a626b01573277710e9/master/w_1000,h_752,c_limit/texas-buttermilk-cornbread.jpg', '35')" ><img class="round-corners" src="https://assets.epicurious.com/photos/580fc5a626b01573277710e9/master/w_1000,h_752,c_limit/texas-buttermilk-cornbread.jpg" width=230px height=180px><p>Cornbread</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box6 zoom" onclick="goToAnotherPage('Whoopie-Pies','https://biscuitstobrownies.com/wp-content/uploads/2021/06/black-forest-whoopie-pie.jpeg', '55')"><img class="round-corners" src="https://biscuitstobrownies.com/wp-content/uploads/2021/06/black-forest-whoopie-pie.jpeg"width=230px height=180px><p>Whoopie-Pies</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box7 zoom" onclick="goToAnotherPage('Pretzel bites', 'https://www.modernhoney.com/wp-content/uploads/2020/05/Homemade-Soft-Pretzel-Bites-5-scaled.jpg', '30')"><img class="round-corners" src="https://www.modernhoney.com/wp-content/uploads/2020/05/Homemade-Soft-Pretzel-Bites-5-scaled.jpg" width=230px height=180px><p>Pretzel bites</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box8 zoom" onclick="goToAnotherPage('Walnut biscotti','https://media.npr.org/assets/img/2011/01/11/maplebiscotti-25e26099686e982ebf3ccf9366db3364b4bb68bf-s1100-c50.jpg', '40')"><img class="round-corners" src="https://media.npr.org/assets/img/2011/01/11/maplebiscotti-25e26099686e982ebf3ccf9366db3364b4bb68bf-s1100-c50.jpg" width=230px height=180px><p>Walnut biscotti</p></div>
+			</a>
+			<a href="order.html" style="text-decoration:none; color:black;"><p class="message1"><i>Order form</i></p></a>
+			<a href="index.html" style="text-decoration:none; color:black;"><p class="message2"><i>Home</i></p></a>
+			<div class="next"><a href="page3.html" style="text-decoration:none;"><p>Next</p></div>
+			<div class="back"><a href="page1.html" style="text-decoration:none;"><p>Back</p></div>
+			</form>
+		</div>
+	</body>
+</html>

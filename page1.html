@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<style>
+		
+			.card{
+				background-color: white;
+			}
+			body{
+				background-color: pink;
+			}
+			h1{
+				font-size:50px;
+				color:blue;
+				text-align: center;
+			}
+			p{
+				text-align: center;
+				font-size:25px;
+			}
+			img.round-corners{
+				border-radius: 25px;
+			}
+			.zoom {
+				  
+				  transition: transform .2s;
+				  width: 250px;
+				  height: 250px;
+				  margin: 0 auto;
+				}
+				.zoom:hover {
+				  -ms-transform: scale(1); 
+				  -webkit-transform: scale(1); 
+				  transform: scale(1); 
+				}
+				.box1{
+				position: absolute;
+				top: 20%;
+				left: 8%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box2{
+				position: absolute;
+				top: 20%;
+				left: 30%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box3{
+				position: absolute;
+				top: 20%;
+				left: 52%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box4{
+				position: absolute;
+				top: 20%;
+				left: 74%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box5{
+				position: absolute;
+				top: 60%;
+				left: 8%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box6{
+				position: absolute;
+				top: 60%;
+				left: 30%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box7{
+				position: absolute;
+				top: 60%;
+				left: 52%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box8{
+				position: absolute;
+				top: 60%;
+				left: 74%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.message1{
+				position: absolute;
+				top:2%;
+				right:8%;
+				font-size:18px;
+				background-color:white;
+			}
+			.message2{
+				position: absolute;
+				top:2%;
+				right:19%;
+				font-size:18px;
+				background-color:white;
+			}
+			.next{
+				position: absolute;
+				bottom: 0%;
+				right:3%;
+				color:black;
+			}
+		</style>
+		<script>
+		  function goToAnotherPage(name, image, cost) {
+			localStorage.setItem("name",name);
+			localStorage.setItem("image",image);
+			localStorage.setItem("cost",cost);
+		  }
+		</script>
+	</head>
+	<body >
+		<div class="card">
+			<h1><i>Cakes</i></h1>
+			<form>
+			<a href="meujsp.jsp">
+			<div class="box1 zoom" onclick="goToAnotherPage('Chocolate cake', 'http://hyderabadbazaar.com/images/10060/cb10_B_071220.jpg', '300')"><img  class="round-corners" src="http://hyderabadbazaar.com/images/10060/cb10_B_071220.jpg" width=230px height=180px><p>Chocolate cake</p></div>
+			</a>
+			<a href="meujsp.jsp">
+			<div class="box2 zoom" onclick="goToAnotherPage('Strawberry cake', 'http://www.cakegift.in/sites/default/files/Chocolate-Strawberry-Cake%20.jpg', '350')"><img class="round-corners" src="http://www.cakegift.in/sites/default/files/Chocolate-Strawberry-Cake%20.jpg" width=230px height=180px><p><label name="item1">Strawberry cake</label></p></div>
+			</a>
+			<a href="meujsp.jsp">
+			<div class="box3 zoom" onclick="goToAnotherPage('Rasmalai cake', 'https://www.thecake.in/image/cache/catalog/cake/Yummy%20Rasmalai%20Cake-from-The%20Cake-500x500.jpg', '320')"><img class="round-corners" src="https://www.thecake.in/image/cache/catalog/cake/Yummy%20Rasmalai%20Cake-from-The%20Cake-500x500.jpg" width=230px height=180px><p><label name="item1">Rasmalai cake</label></p></div>
+			</a>
+			<a href="meujsp.jsp">
+			<div class="box4 zoom" onclick="goToAnotherPage('Pineapple cake', 'https://i.ytimg.com/vi/gIpKJqpzTXY/maxresdefault.jpg', '370')"><img class="round-corners" src="https://i.ytimg.com/vi/gIpKJqpzTXY/maxresdefault.jpg"width=250px height=180px><p><label name="item1">Pineapple cake</label></p></div>
+			</a>
+			<a href="meujsp.jsp">
+			<div class="box5 zoom" onclick="goToAnotherPage('Strawberry cupcake', 'https://static.toiimg.com/thumb/55599531.cms?imgsize=92701&width=800&height=800', '400')"><img class="round-corners" src="https://static.toiimg.com/thumb/55599531.cms?imgsize=92701&width=800&height=800"width=230px height=180px><p><label name="item1">Strawberry cupcake</label></p></div>
+			</a>
+			<a href="meujsp.jsp">
+			<div class="box6 zoom" onclick="goToAnotherPage('Strawberry cheesecake', 'https://sugaryums.co.uk/wp-content/uploads/2021/06/Strawberry-cheesecake-cake-SugarYums-1.jpg', '330')"><img class="round-corners" src="https://sugaryums.co.uk/wp-content/uploads/2021/06/Strawberry-cheesecake-cake-SugarYums-1.jpg"width=230px height=180px><p><label name="item1">Strawberry cheesecake</label></p></div>
+			</a>
+			<a href="meujsp.jsp">
+			<div class="box7 zoom" onclick="goToAnotherPage('Redvelvet cupcake', 'https://www.ruchiskitchen.com/wp-content/uploads/2018/10/Eggless-Red-velvet-cupcakes-16-500x375.jpg', '310')"><img class="round-corners" src="https://www.ruchiskitchen.com/wp-content/uploads/2018/10/Eggless-Red-velvet-cupcakes-16-500x375.jpg"width=230px height=180px><p><label name="item1">Redvelvet cupcake</label></p></div>
+			</a>
+			<a href="meujsp.jsp">
+			<div class="box8 zoom" onclick="goToAnotherPage('Chocolate truffle cake', 'https://assets.winni.in/product/primary/2022/9/74420.jpeg?dpr=1&w=500', '370')"><img class="round-corners" src="https://assets.winni.in/product/primary/2022/9/74420.jpeg?dpr=1&w=500" width=230px height=180px><p><label name="item1">Chocolate truffle cake</label></p></div>
+			</a>
+			<a href="order.html" style="text-decoration:none; color:black;"><p class="message1"><i>Order form</i></p></a>
+			<a href="index.html" style="text-decoration:none; color:black;"><p class="message2"><i>Home</i></p></a>
+			<div class="next"><a href="page2.html" style="text-decoration:none;"><p>Next</p></div>
+			</form>
+		</div> 
+	</body>
+</html>

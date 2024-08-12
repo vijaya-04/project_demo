@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<style>
+			.sign_up_bg_container{
+				background-repeat:no-repeat;
+				background-size:100% 100vh;
+				background-image: url("https://img.freepik.com/free-photo/front-view-delicious-chocolate-cake-stand-with-copy-space_23-2148834056.jpg");
+				height: 100%;
+				width: 100%;
+			}
+			.sign_up_contaier{
+				background-color: white;
+				border-width: 0px;
+				color: black;
+				margin: auto;
+				font-style: italic;
+				height: 535px;
+				width: 467px;
+			}
+			.sign_in_button{
+				padding: 16px;
+				text-align: center;
+				font-weight: bold;
+				width: 230px;
+			}
+			#login{
+				background-color: grey;
+				color: white;
+			}
+			.username_text{
+				color: #6216a6;
+				font-size: 16px;
+				font-family: 'roboto';
+			}
+			.username_box{
+				border: 0;
+				outline: 0;
+				width: 400px;
+				border-bottom: 1px solid black;
+			}
+			.submit_button{
+				background-color: lightblue;
+				color: purple;
+				border: 0px;
+				font-family: 'roboto';
+				width: 400px;
+				height: 46px;
+				text-align: center;
+			}
+			.info{
+				text-align: center;
+				color: grey;
+			}
+			
+		</style>	
+		<script type="text/javascript">
+			function validateForm()
+			 {
+			 var namef = document.registration.fname.value;
+			 var namel = document.registration.lname.value;
+			 var mail = document.registration.uname.value;
+			 var ma = document.registration.pwd.value;
+			
+			 if(namef=="" || namef=="null")
+			 {
+				alert("please enter your first name");
+				document.registration.fname.focus();
+				return false;
+			 }
+			  if(namel=="" || namel=="null")
+			 {
+				alert("please enter your last name");
+				document.registration.lname.focus();
+				return false;
+			 }
+			 if(mail=="" || mail=="null")
+			 {
+				alert("please enter your email");
+				document.registration.mail.focus();
+				return false;
+			 }
+				var atpos = mail.indexOf("@");
+				var dotpos = mail.lastIndexOf(".");
+			 if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= mail.length)
+			 {
+				alert("Not a valid e-mail address");
+				return false;
+			 }
+			 if(ma =="" || ma=="null")
+			 {
+				alert("please enter your password");
+				document.registration.pass.focus();
+				return false;
+			}
+				alert("your registration is successfully completed");
+				return true;
+			}
+			
+			function myFunction() {
+			  var x = document.getElementById("password_box");
+			  if (x.type === "password") {
+				x.type = "text";
+			  } else {
+				x.type = "password";
+			  }
+			}
+		</script>
+	</head>
+	<body>
+		<div class="sign_up_bg_container d-flex flex-column justify-content-center">
+			<div class="sign_up_contaier">
+				<form action="sign.jsp" method="post" name="registration" onsubmit="return validateForm();">
+					<table>
+						<tr>
+							<td><label class="sign_in_button">Sign up</label>
+							<a href="inlog.html"><label class="sign_in_button" id="login">Login</label></a></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<td><label class="username_text mt-2 ml-4">Enter First name</label>
+						</tr>
+						<tr>
+							<td><input type="text" class="username_box ml-4"  name="fname"></td>
+						</tr>
+						<tr>
+							<td><label class="username_text ml-4 mt-3">Enter Last name</label>
+						</tr>
+						<tr>
+							<td><input type="text" class="username_box ml-4"  name="lname"></td>
+						</tr>
+						<tr>
+							<td><label class="username_text mt-4 ml-4">Enter Username </label></td>
+						</tr>
+						<tr> 
+							<td><input type="text" class="username_box ml-4" id="username_id" name="uname"></td>
+						</tr>
+						<tr>
+							<td><label class="username_text mt-4 ml-4">Enter Password</label></td>
+						</tr>
+						<tr>
+							<td><input type="password" class="username_box  ml-4" id="password_box" name="pwd"><br><br>
+							<input type="checkbox" class="ml-4 mb-4" onclick="myFunction()"><label style="font-size: 12px;">Show Password</label></td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Sign Up" name="sbutton" class="submit_button ml-4 mb-3"></td>
+						</tr>
+						<tr>
+							<td><p class="info">Not a member? Sign up now</p></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			
+		</div>
+		
+</html>

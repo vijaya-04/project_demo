@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<style>
+			.card{
+				background-color: white;
+			}
+			body{
+				background-color:pink;
+			}
+			h1{
+				font-size:50px;
+				color:blue;
+				text-align: center;
+			}
+			p{
+				text-align: center;
+				font-size:25px;
+			}
+			img.round-corners{
+				border-radius: 25px;
+			}
+			.zoom {
+				  
+				  transition: transform .2s;
+				  width: 250px;
+				  height: 250px;
+				  margin: 0 auto;
+				}
+
+				.zoom:hover {
+				  -ms-transform: scale(1); 
+				  -webkit-transform: scale(1);
+				  transform: scale(1); 
+				}
+				.box1{
+				position: absolute;
+				top: 20%;
+				left: 8%;
+				font-size: 150px;
+				border-width:2px;
+	
+			}
+			.box2{
+				position: absolute;
+				top: 20%;
+				left: 30%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box3{
+				position: absolute;
+				top: 20%;
+				left: 52%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box4{
+				position: absolute;
+				top: 20%;
+				left: 74%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box5{
+				position: absolute;
+				top: 60%;
+				left: 8%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box6{
+				position: absolute;
+				top: 60%;
+				left: 30%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box7{
+				position: absolute;
+				top: 60%;
+				left: 52%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.box8{
+				position: absolute;
+				top: 60%;
+				left: 74%;
+				font-size: 150px;
+				border-width:2px;
+			}
+			.message1{
+				position: absolute;
+				top:2%;
+				right:8%;
+				font-size:18px;
+				background-color:white;
+			}
+			.message2{
+				position: absolute;
+				top:2%;
+				right:19%;
+				font-size:18px;
+				background-color:white;
+			}
+			.next{
+				position: absolute;
+				bottom: 0%;
+				right:3%;
+				color:black;
+			}
+			.back{
+				position: absolute;
+				bottom: 0%;
+				right:96%;
+				color:black;
+			}	
+		</style>
+		<script>
+		  function goToAnotherPage(name, image, cost) {
+			localStorage.setItem("name",name);
+			localStorage.setItem("image",image);
+			localStorage.setItem("cost",cost);
+		  }
+		</script>
+	</head>
+	<body >
+		<div class="card">
+			<h1><i>Pastries</i></h1>
+			<form>
+			<a href="meujsp.jsp">
+				<div class="box1 zoom" onclick="goToAnotherPage('Choux pastry', 'https://media.istockphoto.com/id/522453220/photo/cream-puffs.jpg?s=612x612&w=0&k=20&c=KhPk5NXGl-9x_LJqEcwI4Ysddphn5rd8ypyA2ZDmcTI=', '80')"><img  class="round-corners" src="https://media.istockphoto.com/id/522453220/photo/cream-puffs.jpg?s=612x612&w=0&k=20&c=KhPk5NXGl-9x_LJqEcwI4Ysddphn5rd8ypyA2ZDmcTI=" width=230px height=180px><p >Choux pastry</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box2 zoom" onclick="goToAnotherPage('Puff pastry', 'https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Puff-Pastry-Danishes_EXPS_SDON17_139153_B06_28_5b_basedon.jpg', '85')"><img class="round-corners" src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Puff-Pastry-Danishes_EXPS_SDON17_139153_B06_28_5b_basedon.jpg" width=230px height=180px><p>Puff pastry</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box3 zoom" onclick="goToAnotherPage('Shortcrust pastry', 'https://www.jusrol.co.uk/wp-content/uploads/2018/08/239_Image_Hero-Image_2018_7_6_20_7_39-500x408.jpg', '75')"><img class="round-corners" src="https://www.jusrol.co.uk/wp-content/uploads/2018/08/239_Image_Hero-Image_2018_7_6_20_7_39-500x408.jpg" width=230px height=180px><p>Shortcrust pastry</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box4 zoom" onclick="goToAnotherPage('Phyllo pastry','https://www.mycookingjourney.com/wp-content/uploads/2017/11/apple-turnovers_1200x1200.jpg', '60')"><img class="round-corners" src="https://www.mycookingjourney.com/wp-content/uploads/2017/11/apple-turnovers_1200x1200.jpg"width=250px height=180px><p>Phyllo pastry</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box5 zoom" onclick="goToAnotherPage('Rough puff pastry','https://thecozyplum.com/wp-content/uploads/2020/05/flaky-rough-puff-pastry-1.jpg', '65')"><img class="round-corners" src="https://thecozyplum.com/wp-content/uploads/2020/05/flaky-rough-puff-pastry-1.jpg"width=230px height=180px><p>Rough puff pastry</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box6 zoom" onclick="goToAnotherPage('Meat rolls','https://1.bp.blogspot.com/-7dPIbobpVxw/YQFZM1ccJwI/AAAAAAAATlI/oNIXqCuxChMmyfgYnB84Nqlg7JNQ6BDOwCLcBGAsYHQ/s800/IMG_2214.JPG', '100')"><img class="round-corners" src="https://1.bp.blogspot.com/-7dPIbobpVxw/YQFZM1ccJwI/AAAAAAAATlI/oNIXqCuxChMmyfgYnB84Nqlg7JNQ6BDOwCLcBGAsYHQ/s800/IMG_2214.JPG"width=230px height=180px><p>Meat rolls</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box7 zoom" onclick="goToAnotherPage('Biscuits','https://tastedrecipes.com/wp-content/uploads/2021/03/Karachi-Biscuits-2.jpg', '50')"><img class="round-corners" src="https://tastedrecipes.com/wp-content/uploads/2021/03/Karachi-Biscuits-2.jpg"width=230px height=180px><p>Biscuits</p></div>
+			</a>
+			<a href="meujsp.jsp">
+				<div class="box8 zoom" onclick="goToAnotherPage('Chicken puff','https://www.yummytummyaarthi.com/wp-content/uploads/2016/05/1-51-500x427.jpeg', '80')"><img class="round-corners" src="https://www.yummytummyaarthi.com/wp-content/uploads/2016/05/1-51-500x427.jpeg"width=230px height=180px><p>Chicken puff</p></div>
+			</a>
+			<a href="order.html" style="text-decoration:none; color:black;"><p class="message1"><i>Order form</i></p></a>
+			<a href="index.html" style="text-decoration:none; color:black;"><p class="message2"><i>Home</i></p></a>
+			<div class="next"><a href="page1.html" style="text-decoration:none;"><p>Next</p></div>
+			<div class="back"><a href="page2.html" style="text-decoration:none;"><p>Back</p></div>
+		</div>
+	</body>
+</html>

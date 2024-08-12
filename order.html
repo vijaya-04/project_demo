@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<style>
+			.bg-container{
+				background-image: url("https://t3.ftcdn.net/jpg/02/52/31/16/360_F_252311651_j4j5znWatcpwsXDzjgPJ0M8DzKD0lkoK.jpg");
+				height: 100vh;
+				background-size: cover;
+				padding-left: 350px;
+			}
+			.order_container{
+				padding: 20px;
+				height: 320px;
+				width: 500px;
+				background-color: white;	
+				border-radius: 10px;
+			}
+			.matter{
+				font-size: 20px;
+				font-family: 'roboto';
+				font-style: italic;
+				font-width: bold;
+				margin: 10px;
+				color: #f01d8d;
+			}
+			.button{
+				margin-top: 10px;
+				background-color: lightblue;
+				font-style: italic;
+				border-width: 0px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg-container d-flex flex-column justify-content-center">
+		<div class="order_container">
+		<form action="orderjsp.jsp" method="post">
+			<table>
+				<tr>
+					<td><label class="matter">Customer's name : </label></td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+				<tr>
+					<td><label class="matter">Phone number : </label></td>
+					<td><input type="text" name="pno"></td>
+				</tr>
+				<tr>
+					<td><label class="matter">Delivery Address : </label></td>
+					<td><input type="textarea" name="address"></td>
+				</tr>
+				<tr>
+					<td><label class="matter">Event type</label>
+					<td><input type="text" name="event"></td>
+				</tr>
+				<tr>
+					<td><label class="matter">Payment Mode : </label></td>
+					<td><input type="radio" name="selectOne">Offline  <input type="radio" name="selectOne">Online</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" class="button" name="subbutton" value="order now"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

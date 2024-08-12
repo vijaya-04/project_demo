@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<style>
+			.sign_in_bg_container{
+				background-repeat:no-repeat;
+				background-size:100% 100vh;
+				background-image: url("https://img.freepik.com/free-photo/front-view-delicious-chocolate-cake-stand-with-copy-space_23-2148834056.jpg");
+				height: 100%;
+				width: 100%;
+			}
+			.sign_in_contaier{
+				background-color: white;
+				border-width: 0px;
+				color: black;
+				margin: auto;
+				font-style: italic;
+				height: 430px;
+				width: 367px;
+			}
+			.sign_in_button{
+				padding: 16px;
+				text-align: center;
+				font-weight: bold;
+				width: 180px;
+			}
+			#login{
+				background-color: grey;
+				color: white;
+			}
+			.username_text{
+				color: #6216a6;
+				font-size: 16px;
+				font-family: 'roboto';
+			}
+			.username_box{
+				border: 0;
+				outline: 0;
+				width: 300px;
+				border-bottom: 1px solid black;
+			}
+			.submit_button{
+				background-color: lightblue;
+				color: purple;
+				border: 0px;
+				font-family: 'roboto';
+				width: 300px;
+				height: 46px;
+				text-align: center;
+			}
+			.help {
+				color: blue;
+				text-decoration: underline;
+				font-size: 15px;
+				text-align: center;
+			}
+			.information{
+				font-size: 20px;
+				text-align: center;
+				color: white;
+				font-weight: bold;
+			}
+			
+		</style>	
+		<script type="text/javascript">
+			function validateForm()
+			 {
+			 var mail = document.registration.uname.value;
+			 var ma = document.registration.pwd.value;
+
+			 if(mail=="" || mail=="null")
+			 {
+				alert("please enter your email");
+				document.registration.mail.focus();
+				return false;
+			 }
+				var atpos = mail.indexOf("@");
+				var dotpos = mail.lastIndexOf(".");
+			 if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= mail.length)
+			 {
+				alert("Not a valid e-mail address");
+				return false;
+			 }
+			 if(ma =="" || ma=="null")
+			 {
+				alert("please enter your password");
+				document.registration.pass.focus();
+				return false;
+			}
+				return true;
+			}
+			
+			function myFunction() {
+			  var x = document.getElementById("password_box");
+			  if (x.type === "password") {
+				x.type = "text";
+			  } else {
+				x.type = "password";
+			  }
+			}
+		</script>
+	</head>
+	<body>
+		<div class="sign_in_bg_container d-flex flex-column justify-content-center">
+			<div class="sign_in_contaier">
+				<form action="loginjsp.jsp" method="post" name="registration" onsubmit="return validateForm();">
+					<table>
+						<tr>
+							<td><a href="signup_demo.html"><label class="sign_in_button" id="login">Sign up</label></a>
+							<label class="sign_in_button">Login</label></td>
+						</tr>
+						<tr></tr>
+						<tr>
+							<td><label class="username_text mt-4 ml-4">Enter Username </label></td>
+						</tr>
+						<tr> 
+							<td><input type="text" class="username_box ml-4" id="username_id" name="uname"></td>
+						</tr>
+						<tr>
+							<td><label class="username_text mt-4 ml-4">Enter Password</label></td>
+						</tr>
+						<tr>
+							<td><input type="password" class="username_box  ml-4" id="password_box" name="pwd"><br><br>
+							<input type="checkbox" class="ml-4 mb-5" onclick="myFunction()"><label style="font-size: 12px;">Show Password</label></td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Log in" name="sbutton" class="submit_button ml-4 mb-3"></td>
+						</tr>
+						<tr>
+							<td><p class="help"><a href="signup_demo.html">Forgot Password</p></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		
+	</body>	
+</html>
